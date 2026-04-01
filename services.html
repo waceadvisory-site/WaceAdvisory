@@ -51,9 +51,9 @@
 <nav class="flex items-center gap-9">
 <a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="index.html#why-us">Why Us</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="services.html">Services</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="about.html">About Us</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="/services">Services</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="/about">About Us</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors" href="/contact">Contact Us</a>
 </nav>
 <button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
 <span class="truncate">Book a Consultation</span>
@@ -67,9 +67,9 @@
 <nav class="flex flex-col gap-1">
 <a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="index.html">Home</a>
 <a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="index.html#why-us">Why Us</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="services.html">Services</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="about.html">About Us</a>
-<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="contact.html">Contact Us</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="/services">Services</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="/about">About Us</a>
+<a class="text-[#111318] dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors px-2 py-2" href="/contact">Contact Us</a>
 </nav>
 <button class="w-full cursor-pointer rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
 Book a Consultation
@@ -90,8 +90,16 @@ Book a Consultation
 </div>
 <div class="flex gap-3">
 <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center min-w-[120px]">
-<span class="text-2xl font-bold text-primary">15+</span>
+<span class="text-2xl font-bold text-primary" id="years-exp"></span>
 <span class="text-[10px] uppercase font-bold text-[#616f89]">Years Exp.</span>
+<script>
+(function(){
+  var start = new Date('2024-05-30');
+  var now = new Date();
+  var years = (now - start) / (1000 * 60 * 60 * 24 * 365.25);
+  document.getElementById('years-exp').textContent = years < 1 ? 'Est. 2024' : Math.floor(years) + '+';
+})();
+</script>
 </div>
 <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center min-w-[120px]">
 <span class="text-2xl font-bold text-primary">500+</span>
@@ -100,23 +108,17 @@ Book a Consultation
 </div>
 </div>
 </div>
-<div class="mb-10 overflow-x-auto">
-<div class="flex border-b border-gray-200 dark:border-gray-800 min-w-max">
-<a class="border-b-2 border-primary text-primary px-6 py-4 text-sm font-bold" href="#">All Expertise</a>
-<a class="border-b-2 border-transparent text-[#616f89] hover:text-primary px-6 py-4 text-sm font-bold transition-colors" href="#">Personal Tax</a>
-<a class="border-b-2 border-transparent text-[#616f89] hover:text-primary px-6 py-4 text-sm font-bold transition-colors" href="#">Corporate Strategy</a>
-<a class="border-b-2 border-transparent text-[#616f89] hover:text-primary px-6 py-4 text-sm font-bold transition-colors" href="#">Audit &amp; Compliance</a>
-<a class="border-b-2 border-transparent text-[#616f89] hover:text-primary px-6 py-4 text-sm font-bold transition-colors" href="#">International</a>
-</div>
-</div>
+
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">person</span>
+<span class="material-symbols-outlined text-3xl">manage_accounts</span>
 </div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">Personal Income Tax</h3>
+<h3 class="text-xl font-bold mb-3 dark:text-white">Outsourced Finance Manager (OFM)</h3>
 <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Maximize your deductions and ensure full compliance with expert personal filings. We handle complex multi-state returns and high-net-worth scenarios.
+                A dedicated finance partner to bring structure, clarity, and control to your business finances.<br/><br/>
+                At Wace Advisory, our Outsourced Finance Manager (OFM) service provides experienced financial leadership without the cost of a full-time hire. We work alongside your team to strengthen your financial operations, improve reporting accuracy, and give business owners the insights they need to make confident decisions.<br/><br/>
+                Rather than simply preparing reports, we focus on building a well-structured finance function that supports sustainable business growth.
             </p>
 <a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
                 Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -124,11 +126,13 @@ Book a Consultation
 </div>
 <div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">business</span>
+<span class="material-symbols-outlined text-3xl">receipt_long</span>
 </div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">Corporate Tax Planning</h3>
+<h3 class="text-xl font-bold mb-3 dark:text-white">Taxation Services</h3>
 <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Strategic tax optimization and structural advisory for businesses of all sizes. From startups to established enterprises, we scale with your growth.
+                Practical tax guidance and reliable compliance support for individuals and businesses.<br/><br/>
+                At Wace Advisory, we provide comprehensive taxation services designed to help clients navigate tax obligations with clarity and confidence. Our team stays up to date with current tax regulations to ensure your filings are accurate, compliant, and aligned with your financial objectives.<br/><br/>
+                Beyond tax filing, we assist clients in understanding their tax position, managing potential risks, and preparing for future tax obligations through practical planning and advisory.
             </p>
 <a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
                 Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -136,52 +140,19 @@ Book a Consultation
 </div>
 <div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
 <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">gavel</span>
+<span class="material-symbols-outlined text-3xl">fact_check</span>
 </div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">IRS Audit Representation</h3>
+<h3 class="text-xl font-bold mb-3 dark:text-white">Audit &amp; Assurance</h3>
 <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Professional advocacy and total peace of mind. We stand between you and the IRS, managing all correspondence and protecting your interests.
+                Independent audits that strengthen confidence in your financial statements and business operations.<br/><br/>
+                At Wace Advisory, our Audit &amp; Assurance services are designed to provide businesses, shareholders, and stakeholders with reliable and transparent financial reporting. We conduct independent audits to ensure your financial statements comply with applicable accounting standards and regulatory requirements.<br/><br/>
+                Our audit approach goes beyond compliance. By applying a structured risk-based audit methodology, we gain a deep understanding of your organisation's operations, financial processes, and key business risks. This allows us to deliver meaningful insights while ensuring the integrity and reliability of your financial information.
             </p>
 <a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
                 Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">family_restroom</span>
-</div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">Estate &amp; Trust Planning</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Preserve your hard-earned wealth and secure your legacy. We design comprehensive tax-efficient structures for future generations.
-            </p>
-<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
-                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">public</span>
-</div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">International Taxation</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Expert guidance on cross-border transactions, foreign assets, and international tax treaties. Stay compliant while operating globally.
-            </p>
-<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
-                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="group bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
-</div>
-<h3 class="text-xl font-bold mb-3 dark:text-white">Bookkeeping &amp; VAT</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-6">
-                Continuous financial clarity for your daily operations. We manage your books and VAT obligations so you can focus on running your business.
-            </p>
-<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group-hover:gap-3 transition-all" href="#">
-                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
+
 </div>
 <div class="mt-20 @container">
 <div class="flex flex-col @[864px]:flex-row gap-10 items-center bg-[#111318] text-white rounded-2xl overflow-hidden p-10 md:p-16">
@@ -229,9 +200,6 @@ Book a Consultation
 <button class="bg-primary text-white h-12 px-10 rounded-lg font-bold hover:scale-105 transition-transform">
                 Book My Consultation
             </button>
-<button class="bg-white dark:bg-gray-800 text-[#111318] dark:text-white border border-gray-200 dark:border-gray-700 h-12 px-10 rounded-lg font-bold hover:bg-gray-50 transition-colors">
-                View FAQ
-            </button>
 </div>
 </div>
 </main>
@@ -242,9 +210,9 @@ Book a Consultation
 <span class="font-bold text-sm tracking-tight" style="color: #2b5798;">Wace Advisory © 2024</span>
 </div>
 <div class="flex gap-8 text-xs font-bold text-[#616f89] uppercase tracking-widest">
-<a class="hover:text-primary" href="#">Privacy Policy</a>
-<a class="hover:text-primary" href="#">Terms of Service</a>
-<a class="hover:text-primary" href="#">Compliance</a>
+<a class="hover:text-primary" href="/privacy-policy">Privacy Policy</a>
+<a class="hover:text-primary" href="/terms-of-service">Terms of Service</a>
+<a class="hover:text-primary" href="/compliance">Compliance</a>
 </div>
 </div>
 </footer>
